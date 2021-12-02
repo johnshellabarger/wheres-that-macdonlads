@@ -92,14 +92,22 @@ let places = [
   [{ lat: 34.3934459, lng: 132.4576324 }, {heading: 0, pitch: 8 }], 
   [{ lat: 56.4560068, lng: 84.9739889 }, {heading: -140, pitch: 8 }], 
   [{ lat: 33.7419109, lng: -84.3493135 }, {heading: -100, pitch: 12 }], 
+
+  [{ lat: 34.0426219, lng: -118.3766484 }, {heading: 0, pitch: 10 }], 
+  [{ lat: -33.4428858, lng: -70.6459227}, {heading: 150, pitch: 10 }],
+  [{ lat: 18.4626096, lng: -66.0935658 }, {heading: 0, pitch: 6 }], 
+  [{ lat: 46.4303122, lng:30.7290636}, {heading: -25, pitch: 10 }],
+  [{ lat: 34.2271753, lng: -77.8307044 }, {heading: 100, pitch: 10 }], 
+  [{ lat: 51.5012276, lng: -0.1934662 }, {heading: 50, pitch: 4 }],
+  [{ lat: 14.6431828, lng: 121.0378312 }, {heading: -150, pitch: 8 }], 
+  [{ lat: -39.4933145, lng: 176.9105662 }, {heading: 0, pitch: 8 }], 
+  [{ lat: 41.9307204, lng: -87.643827 }, {heading: 100, pitch: 12 }], 
 ]
 
 // Gets a random location 
 let currentPlace = places[Math.floor(Math.random() * (places.length))]  
 let coordinates = currentPlace[0]
 googlePov = currentPlace[1] 
-
-console.log(googlePov)
 
 // Initializes google maps and a polyline 
 function initialize() {
