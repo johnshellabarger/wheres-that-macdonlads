@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Street View Containers</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+      </style>
+
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type='text/javascript' src="./index.js" defer></script>
+  </head>
+  <body>
+    
+    <div id ='home-screen-container' class='home-screen-container'>
+      <div class="home-screen-slider"></div>
+      <!-- <div class="yellow-slider"></div> -->
+      <div class="white-background"></div>
+
+      
+      <div class='home-screen-title'>
+        <img src='./mcd.gif' id='logo' class='logo'>
+        <div class='home-screen-btns'>
+          <button id='how-to-play-btn' class='how-to-play-btn'>How To Play</button>
+          <button id='start-game-btn' class='start-game-btn'>Start Game</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id='instructions-container' class='instructions-container'>
+      <div class='instructions'>
+        <h1 class='instructions-header'>Instructions</h1>
+        <p class='instructions-text'>
+          Use Google Street View to try and figure out what McDonald's
+          location you are at in the world. Feel free to explore around in the street view
+          to look for clues as to where you are! Once you've narrowed down 
+          your location, drop a pin on the map on the bottom right. The closer 
+          your guess is, the more points you get.
+        </p>
+
+        <h3 class='instructions-inner-header'>
+          5 rounds with a max of 5000 points per round.
+          Can you get a perfect score?
+        </h3>
+        
+        <button id='okay-btn' class='okay-btn'>Okay</button>
+      </div>
+    </div>
+
+
+
+    <div class='whole-score-card'>
+      <div id='score-card-shapes' class='score-card-shapes'>
+        <div class='trapezoid-red'></div>
+        <div class='trapezoid-yellow'></div>
+        <div class='square-yellow'></div>
+      </div>
+  
+      <div id='game-score-card-container' class='game-score-card-container'>
+          <div class='game-score-card-inner'>
+  
+            <div class='score-card-section'>
+              <div class='score-card-label'>Map</div>
+              <div class='score-card-value'>World</div>
+            </div>
+    
+            <div class='score-card-section'>
+              <div class='score-card-label round'>Round</div>
+              <div id='round' class='score-card-value'></div>
+            </div>
+    
+            <div class='score-card-section'>
+              <div class='score-card-label'>Score</div>
+              <div id ='user-score' class='score-card-value'>0</div>
+            </div>
+    
+        </div>
+      </div>
+    </div>
+    
+  
+    <div class='street-view' id="street-view"></div>
+      
+    <div id='map-box-container' class='map-box-container'>
+      <div class='map-box' id="map"></div>
+      <div>
+        <button id='place-pin-btn' class='place-style'>PLACE YOUR PIN ON THE MAP</button>
+        <button id='guess-btn' class='hide' onclick="guess()">GUESS</button>
+      </div>
+    </div>
+
+    <div id='guess-score-container' class='hide'>
+      <p id='points-added' class='points-added'></p>
+      <p id='guessed-distance'></p>
+      <button id='next-round-btn' class='next-round-btn' onclick='playNextRound()'>Play Next Round</button>
+    </div>
+  
+    <div id='final-score-container' class='hide'>
+      <div class='final-score-card'>
+        <h1 id='your-final-score' class='your-final-score'></h1>
+        <button class='play-again-btn' onclick='playAgain()'>Go Home</button>
+      </div>
+    </div>
+
+
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      id='google-api-script'
+      src="https://maps.googleapis.com/maps/api/js?key=API&callback=initialize&v=weekly"
+      async
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"
+  ></script>
+  </body>
+</html>
