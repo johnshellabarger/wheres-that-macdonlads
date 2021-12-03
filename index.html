@@ -7,7 +7,6 @@
       @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
       </style>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type='text/javascript' src="./index.js" defer></script>
   </head>
   <body>
     
@@ -105,11 +104,14 @@
 
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script type='text/javascript' src="./index.js" defer></script>
+
+    
     <script
       id='google-api-script'
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvL-iqHW2SvxSd6nb2Nu5W7jtidOoLQXM&callback=initMap&v=weekly"
       async='false'
-      defer 
+ 
     ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>

@@ -121,7 +121,7 @@ let coordinates = currentPlace[0]
 googlePov = currentPlace[1] 
 
 // Initializes google maps and a polyline 
-function initMap() {
+window.initMap = function() {
   map = new google.maps.Map(document.getElementById("map"), {
    zoom: 1,
    center: {
