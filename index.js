@@ -102,6 +102,16 @@ let places = [
   [{ lat: 14.6431828, lng: 121.0378312 }, {heading: -150, pitch: 8 }], 
   [{ lat: -39.4933145, lng: 176.9105662 }, {heading: 0, pitch: 8 }], 
   [{ lat: 41.9307204, lng: -87.643827 }, {heading: 100, pitch: 12 }], 
+
+  [{ lat: 29.7487717, lng: -95.3711096 }, {heading: 50, pitch: 10 }], 
+  [{ lat: 25.1518811, lng: 55.2007904,}, {heading: -50, pitch: 10 }],
+  [{ lat: 39.7353519, lng: -8.7994176 }, {heading: -125, pitch: 6 }], 
+  [{ lat: 18.4622425, lng: -66.2708305 }, {heading: 25, pitch: 10 }],
+  [{ lat: -12.1100047, lng: -77.03725 }, {heading: -100, pitch: 14 }], 
+  [{ lat: 25.7904218, lng: -80.1319336 }, {heading: -100, pitch: 4 }],
+  [{ lat: 25.0778329, lng: -77.346336 }, {heading: -150, pitch: 8 }], 
+  [{ lat: 36.1809066, lng: -115.1801713 }, {heading: 120, pitch: 8 }], 
+  [{ lat: 44.9149924, lng: -68.6833332 }, {heading: -20, pitch: 12 }], 
 ]
 
 // Gets a random location 
