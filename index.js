@@ -14,8 +14,6 @@ let googlePov;
 
 let homeScreen = document.getElementById('home-screen-container')
 
-
-
 // GSAP Animations
 gsap.from('.home-screen-slider', { duration: 2, y: '-100%', ease: 'bounce', delay: 1.5})
 gsap.from('.logo', { duration: 2, x: '200%', ease: 'elastic', delay: 3 })
@@ -121,7 +119,7 @@ let coordinates = currentPlace[0]
 googlePov = currentPlace[1] 
 
 // Initializes google maps and a polyline 
-window.initMap = function() {
+function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
    zoom: 1,
    center: {
