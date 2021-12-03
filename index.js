@@ -15,10 +15,11 @@ let googlePov;
 let homeScreen = document.getElementById('home-screen-container')
 
 
+
 // GSAP Animations
-gsap.from('.home-screen-slider', { duration: 1.2, y: '-100%', ease: 'bounce', delay: .1})
-gsap.from('.logo', { duration: 2, x: '200%', ease: 'elastic', delay: 1.2 })
-gsap.fromTo('.home-screen-btns', { opacity: 0}, {opacity: 1, duration: 4.5, ease: 'expo', delay: 2})
+gsap.from('.home-screen-slider', { duration: 1.2, y: '-100%', ease: 'bounce', delay: 1.5})
+gsap.from('.logo', { duration: 2, x: '200%', ease: 'elastic', delay: 2 })
+gsap.fromTo('.home-screen-btns', { opacity: 0}, {opacity: 1, duration: 4.5, ease: 'expo', delay: 2.3})
 
 let howToPlayBtn = document.getElementById('how-to-play-btn')
 let instructionsContainer = document.getElementById('instructions-container')
@@ -120,7 +121,7 @@ let coordinates = currentPlace[0]
 googlePov = currentPlace[1] 
 
 // Initializes google maps and a polyline 
-function initialize() {
+function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
    zoom: 1,
    center: {
@@ -209,7 +210,7 @@ const playNextRound = () => {
 
   
 
-  initialize()
+  initMap()
 }
 
 
