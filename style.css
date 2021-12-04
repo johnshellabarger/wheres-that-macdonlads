@@ -231,11 +231,10 @@ body {
   z-index: 5;
   bottom: 2rem;
   right:2rem;
-
 }
 
 .map-box-container:hover {
-  opacity: 1
+
 }
 
 .guess-map {
