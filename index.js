@@ -15,9 +15,9 @@ let googlePov;
 let homeScreen = document.getElementById('home-screen-container')
 
 // GSAP Animations
-// gsap.from('.home-screen-slider', { duration: 2, y: '-100%', ease: 'bounce', delay: 1.5})
-// gsap.from('.logo', { duration: 2, x: '200%', ease: 'elastic', delay: 3 })
-// gsap.fromTo('.home-screen-btns', { opacity: 0}, {opacity: 1, duration: 4.5, ease: 'expo', delay: 2.3})
+gsap.from('.home-screen-slider', { duration: 2, y: '-100%', ease: 'bounce', delay: 1.5})
+gsap.from('.logo', { duration: 2, x: '200%', ease: 'elastic', delay: 3 })
+gsap.fromTo('.home-screen-btns', { opacity: 0}, {opacity: 1, duration: 4.5, ease: 'expo', delay: 2.3})
 
 let howToPlayBtn = document.getElementById('how-to-play-btn')
 let instructionsContainer = document.getElementById('instructions-container')
@@ -248,6 +248,8 @@ const guess= () => {
     url: "https://freepngimg.com/thumb/burger%20sandwich/38-hamburger-burger-png-image.png",
     scaledSize: new google.maps.Size(27, 27),
   };
+
+
   
   correctMarker = new google.maps.Marker({
     position: coordinates,

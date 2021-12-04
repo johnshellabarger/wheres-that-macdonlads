@@ -11,7 +11,11 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
-    
+
+    <div class='spinner-wrapper'>
+      <div class="spinner"></div>
+  </div>
+
     <div id ='home-screen-container' class='home-screen-container'>
       <div class="home-screen-slider"></div>
       <!-- <div class="yellow-slider"></div> -->
@@ -106,13 +110,21 @@
 
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script>
+      let spinnerWrapper = document.querySelector('.spinner-wrapper');
+  
+      window.addEventListener('load', function () {
+          // spinnerWrapper.style.display = 'none';
+          spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      });
+  </script>
 
     <script
     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
     integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
     crossorigin="anonymous"
   ></script>
-  
+
     <script type='text/javascript' src="./index.js"></script>
 
     <script
