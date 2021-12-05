@@ -44,7 +44,6 @@
   to {
       transform: rotate(360deg);
   }
-
 }
 
 
@@ -120,9 +119,6 @@
   z-index: 65;
 }
 
-/* .whole-score-card {
- transform: translateX(-100%);
-} */
 
 
 .instructions {
@@ -202,7 +198,6 @@ body {
 
 #street-view {
   height: 100%;
-  /* filter: invert(1); */
 }
 
 .trapezoid-red{
@@ -279,17 +274,29 @@ body {
 .map-box-container {
   margin-top: 50px;
   /* background-color: pink; */
-  height: 300px;
-  width: 400px;
+  height: 200px;
+  width: 300px;
   position: absolute;
   z-index: 5;
   bottom: 2rem;
   right:2rem;
+  opacity: .5;
 }
 
-.map-box-container:hover {
-
+.map-box-container:hover{
+  height: 450px;
+  width: 600px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  opacity: 1;
 }
+
+.map-box-container:hover .map-box{
+  height: 395px;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
 
 .guess-map {
   z-index: 3;
@@ -301,8 +308,9 @@ body {
   margin: 0px;
   left: 0px;
   top: 0px;
-  touch-action: pan-x pan-y;
+  /* touch-action: pan-x pan-y; */
   pointer-events: none;
+  opacity: 1;
 }
 
 
@@ -311,7 +319,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 245px;
+  height: 145px;
   z-index: 5;
 	box-shadow: 0px 0px 20px black;
 	border: 3px solid rgb(255, 199, 44);
