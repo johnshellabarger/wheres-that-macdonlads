@@ -37,7 +37,7 @@
         <h1 class='instructions-header'>Instructions</h1>
         <p class='instructions-text'>
           Use Google Street View to try and figure out what McDonald's
-          location you are at in the world. Feel free to explore around in the street view
+          location you are at in the world. Feel free to explore around in the street view as much as you'd like
           to look for clues as to where you are! Once you've narrowed down 
           your location, drop a pin on the map on the bottom right. The closer 
           your guess is, the more points you get.
@@ -109,12 +109,10 @@
 
 
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script>
       let spinnerWrapper = document.querySelector('.spinner-wrapper');
   
       window.addEventListener('load', function () {
-          // spinnerWrapper.style.display = 'none';
           spinnerWrapper.parentElement.removeChild(spinnerWrapper);
       });
   </script>
@@ -132,7 +130,6 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvL-iqHW2SvxSd6nb2Nu5W7jtidOoLQXM&callback=initMap&v=weekly"
       defer
     ></script>
-
 
   </body>
 </html>
