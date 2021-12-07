@@ -81,6 +81,12 @@ let userScore = document.getElementById('user-score')
 let finalScore = document.getElementById('final-score-container')
 
 
+smallGoogleMapContainer.addEventListener('transitionend', addActive)
+
+function addActive(){
+  smallGoogleMapContainer.classList.add('active')
+}
+
 let places = [
   [{ lat: 39.411930, lng: -104.872806 }, {heading: 0, pitch: 10 }], 
   [{ lat: -33.976695, lng: 25.647533}, {heading: 180, pitch: 10 }],
@@ -166,8 +172,9 @@ function initMap() {
      },
      linksControl: false,
      panControl: false,
-     enableCloseButton: true,
+     enableCloseButton: false,
      disableDefaultUI: true,
+     showRoadLabels: false,
    }
    
  )
