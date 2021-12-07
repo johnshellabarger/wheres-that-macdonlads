@@ -280,9 +280,6 @@ body {
   bottom: 2rem;
   right:2rem;
   opacity: .5;
-
-  /* transition-duration: 1s; */
-  transition-timing-function: ease-in-out; 
 }
 
 .map-box-container:hover{
@@ -310,8 +307,8 @@ body {
   margin: 0px;
   left: 0px;
   top: 0px;
-  /* touch-action: pan-x pan-y; */
-  pointer-events: none;
+  touch-action: pan-x pan-y;
+  pointer-events:none;
   opacity: 1;
 }
 
@@ -324,11 +321,10 @@ body {
   height: 145px;
   z-index: 5;
 	box-shadow: 0px 0px 20px black;
-	border: 3px solid rgb(255, 199, 44);
 }
 
 .map-box-guess {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -367,7 +363,7 @@ body {
   z-index: 5;
   bottom: 0;
   border-radius: 15px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background-color: rgb(14, 109, 42);
   color: white;
   cursor: pointer;

@@ -26,7 +26,7 @@ let okayBtn = document.getElementById('okay-btn')
 let startGameBtn = document.getElementById('start-game-btn')
 
 howToPlayBtn.addEventListener('click', ()=> {
-  gsap.fromTo(".instructions-container", { y: '-100%'}, {y: '35px', ease: 'bounce', delay: .2, duration: 2})
+  gsap.fromTo(".instructions-container", { y: '-100%'}, {y: '35px', ease: 'power2', delay: .2, duration: 2})
 })
 
 okayBtn.addEventListener('click', () => {
@@ -190,7 +190,6 @@ const playNextRound = () => {
   smallGoogleMap.classList.remove('map-box-guess')
   smallGoogleMap.classList.add('map-box')
 
-  // gsap.fromTo(".guess-score-container", { opacity: '1'}, {opacity: '0', ease: 'power3', duration: 3})
   guessScoreContainer.classList.remove('guess-score-container')
 
   smallGoogleMapContainer.classList.remove('guess-map')
@@ -256,8 +255,6 @@ const guess= () => {
     scaledSize: new google.maps.Size(27, 27),
   };
 
-
-  
   correctMarker = new google.maps.Marker({
     position: coordinates,
     icon: image,
@@ -274,7 +271,7 @@ const guess= () => {
   calculateDistance(marker, correctMarker)
 
   placePinBtn.classList.add('hide')
-
+ 
   smallGoogleMapContainer.classList.add('guess-map')
 
   guessBtn.classList.add('hide')
