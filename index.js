@@ -26,11 +26,11 @@ let okayBtn = document.getElementById('okay-btn')
 let startGameBtn = document.getElementById('start-game-btn')
 
 howToPlayBtn.addEventListener('click', ()=> {
-  gsap.fromTo(".instructions-container", { y: '-100%'}, {y: '35px', ease: 'power2', delay: .2, duration: 2})
+  gsap.fromTo(".instructions-container", { y: '-100%'}, {y: '10px', ease: 'power2', delay: .2, duration: 2})
 })
 
 okayBtn.addEventListener('click', () => {
-  gsap.fromTo(".instructions-container", { y: '35px'}, {y: '-100%', ease: 'power4', delay: .2, duration: 2})
+  gsap.fromTo(".instructions-container", { y: '10px'}, {y: '-100%', ease: 'power4', delay: .2, duration: 2})
 })
 
 startGameBtn.addEventListener('click', () => {
