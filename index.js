@@ -12,6 +12,8 @@ let points;
 let distance;
 let googlePov;
 
+let roundCounter = 0;
+
 let homeScreen = document.getElementById('home-screen-container')
 
 // GSAP Animations
@@ -97,7 +99,6 @@ let places = [
   [{ lat: 34.3934459, lng: 132.4576324 }, {heading: 0, pitch: 8 }], 
   [{ lat: 56.4560068, lng: 84.9739889 }, {heading: -140, pitch: 8 }], 
   [{ lat: 33.7419109, lng: -84.3493135 }, {heading: -100, pitch: 12 }], 
-
   [{ lat: 34.0426219, lng: -118.3766484 }, {heading: 0, pitch: 10 }], 
   [{ lat: -33.4428858, lng: -70.6459227}, {heading: 150, pitch: 10 }],
   [{ lat: 18.4626096, lng: -66.0935658 }, {heading: 0, pitch: 6 }], 
@@ -107,7 +108,6 @@ let places = [
   [{ lat: 14.6431828, lng: 121.0378312 }, {heading: -150, pitch: 8 }], 
   [{ lat: -39.4933145, lng: 176.9105662 }, {heading: 0, pitch: 8 }], 
   [{ lat: 41.9307204, lng: -87.643827 }, {heading: 100, pitch: 12 }], 
-
   [{ lat: 29.7487717, lng: -95.3711096 }, {heading: 50, pitch: 10 }], 
   [{ lat: 25.1518811, lng: 55.2007904,}, {heading: -50, pitch: 10 }],
   [{ lat: 39.7353519, lng: -8.7994176 }, {heading: -125, pitch: 6 }], 
@@ -117,7 +117,6 @@ let places = [
   [{ lat: 25.0778329, lng: -77.346336 }, {heading: -150, pitch: 8 }], 
   [{ lat: 36.1809066, lng: -115.1801713 }, {heading: 120, pitch: 8 }], 
   [{ lat: 44.9149924, lng: -68.6833332 }, {heading: -20, pitch: 12 }], 
-
   [{ lat: 33.7716296, lng: -118.1798809 }, {heading: 100, pitch: 10 }], 
   [{ lat: 14.624039, lng: -90.514994}, {heading: -50, pitch: 10 }],
   [{ lat: 22.9928811, lng: 120.1987118 }, {heading: 50, pitch: 6 }], 
@@ -129,8 +128,15 @@ let places = [
   [{ lat: 36.1562857, lng: -86.7876248 }, {heading: 50, pitch: 12 }], 
 ]
 
-// Gets a random location 
-let currentPlace = places[Math.floor(Math.random() * (places.length))]  
+
+
+// Gets 5 random locations from above array 
+
+let randomFiveLocations = places.splice( Math.floor(Math.random()*places.length), 5 );
+if(round < 5){
+  currentPlace = randomFiveLocations[roundCounter]
+}
+
 let coordinates = currentPlace[0]
 googlePov = currentPlace[1] 
 
@@ -197,6 +203,8 @@ const playAgain = () => {
 
 // Starts a new round - hides elements it needs to, updates score and round then re-initializes the maps
 const playNextRound = () => { 
+  roundCounter++
+
   smallGoogleMap.classList.remove('map-box-guess')
   smallGoogleMap.classList.add('map-box')
 
@@ -225,6 +233,7 @@ const playNextRound = () => {
   
 
   initMap()
+
 }
 
 
